@@ -6,18 +6,32 @@
     <title>Zaid Hafeez - Portfolio & Blog</title>
     <meta name="description" content="Portfolio and blog of Zaid Hafeez - Developer, Creator, and Tech Enthusiast">
     <link rel="stylesheet" href="styles/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Modern Meta Tags -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles/main.css" as="style">
+    <link rel="preload" href="scripts/main.js" as="script">
 </head>
 <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator" id="scroll-indicator"></div>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="#home">Zaid Hafeez</a>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
+                <a href="#home" class="nav-link active">Home</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#portfolio" class="nav-link">Portfolio</a>
                 <a href="#blog" class="nav-link">Blog</a>
@@ -34,21 +48,23 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">
-                Hi, I'm <span class="highlight">Zaid Hafeez</span>
-            </h1>
-            <p class="hero-subtitle">Full Stack Developer & Tech Enthusiast</p>
-            <p class="hero-description">
-                I create digital experiences that make a difference. Welcome to my corner of the internet where I share my projects, thoughts, and journey in tech.
-            </p>
-            <div class="hero-buttons">
-                <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Zaid Hafeez</span>
+                </h1>
+                <p class="hero-subtitle">Full Stack Developer & Tech Enthusiast</p>
+                <p class="hero-description">
+                    I create digital experiences that make a difference. Welcome to my corner of the internet where I share my projects, thoughts, and journey in tech.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
             </div>
-        </div>
-        <div class="hero-image">
-            <div class="profile-placeholder">
-                <i class="fas fa-user"></i>
+            <div class="hero-image">
+                <div class="profile-placeholder">
+                    <i class="fas fa-user"></i>
+                </div>
             </div>
         </div>
     </section>
