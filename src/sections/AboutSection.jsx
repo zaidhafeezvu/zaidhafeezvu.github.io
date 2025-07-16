@@ -237,6 +237,11 @@ const AboutSection = () => {
                             whileInView={{ width: `${tech.level}%` }}
                             transition={{ duration: 1, delay: 0.2 }}
                             className="h-full bg-accent rounded-full"
+                            role="progressbar"
+                            aria-valuenow={tech.level}
+                            aria-valuemin={0}
+                            aria-valuemax={100}
+                            aria-label={`${tech.name} proficiency level: ${tech.level}%`}
                           />
                         </div>
                         <span className="text-xs text-primary/60 font-medium w-8">
