@@ -179,7 +179,14 @@ const AboutSection = () => {
             {/* CTA */}
             <motion.div variants={itemVariants}>
               <button
-                onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => {
+                  const contactElement = document.getElementById('contact');
+                  if (contactElement) {
+                    contactElement.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    console.warn('Contact section not found');
+                  }
+                }}
                 className="flex items-center space-x-3 px-6 py-3 bg-accent text-secondary rounded-lg font-medium hover:bg-accent/90 hover:scale-105 transition-all duration-300 group"
               >
                 <span>Let's Work Together</span>
