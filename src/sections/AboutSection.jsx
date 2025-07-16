@@ -87,9 +87,20 @@ const AboutSection = () => {
                 {/* Main Image */}
                 <img
                   src={Images.about || "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=600&fit=crop"}
-                  alt="About me"
+                  alt="Professional portrait of Zaid Hafeez working on development projects in a modern workspace"
                   className="relative w-full h-auto rounded-3xl shadow-2xl border-2 border-accent/20"
+                  onError={(e) => {
+                    e.target.src = "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=600&fit=crop";
+                    console.warn('Failed to load about image, using fallback');
+                  }}
+                  loading="lazy"
+                  aria-describedby="about-image-description"
                 />
+                
+                {/* Hidden description for screen readers */}
+                <span id="about-image-description" className="sr-only">
+                  Image showing a professional development workspace with modern technology and coding environment
+                </span>
                 
                 {/* Floating Tech Icons */}
                 <motion.div
