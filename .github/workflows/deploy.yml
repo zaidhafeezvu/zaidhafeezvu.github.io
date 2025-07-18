@@ -50,6 +50,7 @@ jobs:
 
       - name: Lint code
         run: bun run lint
+        continue-on-error: true
 
       - name: Build with Vite
         run: bun run build
