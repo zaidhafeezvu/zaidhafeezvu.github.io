@@ -58,4 +58,5 @@ jobs:
           find dist -name "*.js" -o -name "*.css" | head -10 | while read file; do
             size=$(ls -lh "$file" | awk '{print $5}')
             echo "| \`${file#dist/}\` | $size |" >> $GITHUB_STEP_SUMMARY
+
           done
